@@ -13,7 +13,7 @@ export default function Add(props) {
         },3000);
         // setAddedMessage('added new message here :) ')
         props.onAdd(addedMessage)
-
+        setAddedMessage(inputRef.current.value)
         console.log(inputRef.current.value);
 
     }

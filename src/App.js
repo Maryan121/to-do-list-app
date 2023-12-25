@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Lists  addedMessage = {addedMessage}/> */}
+      <Lists  addedMessage = {addedMessage}/>
       {/* <Add /> */}
       {showAddCom && <Add show = {showAddCom} onAdd = {handleMessage}/>}
       <FaPlus className='plusIcon' onClick={showTheAddComponentFunc}/>

@@ -3,7 +3,7 @@ import {AiOutlineClose} from 'react-icons/ai';
 import { FaCircleDot } from "react-icons/fa6";
 
 
-export default function Lists() {
+export default function Lists(props) {
   return (
     <div className='listsContainer'>
         <div className='firstsec'>
@@ -12,7 +12,15 @@ export default function Lists() {
         </div>
       <div className='lists'>
         <ul>
-            <li className='listItem'> <FaCircleDot className='dot'/> reading for 20 minutes <AiOutlineClose className='listCloseIcon'/></li>
+            <li className='listItem'> <FaCircleDot className='dot'/> {props.addedMessage} <AiOutlineClose className='listCloseIcon'/></li>
+            <li className='listItem'><FaCircleDot className='dot'/>reading for 20 minutes <AiOutlineClose className='listCloseIcon'/></li>
+            <li className='listItem'><FaCircleDot className='dot'/>reading for 20 minutes <AiOutlineClose className='listCloseIcon'/></li>
+            <li className='listItem'><FaCircleDot className='dot'/>reading for 20 minutes <AiOutlineClose  className='listCloseIcon'/></li>
+            <li className='listItem'> <FaCircleDot className='dot'/> {props.addedMessage} <AiOutlineClose className='listCloseIcon'/></li>
+            <li className='listItem'><FaCircleDot className='dot'/>reading for 20 minutes <AiOutlineClose className='listCloseIcon'/></li>
+            <li className='listItem'><FaCircleDot className='dot'/>reading for 20 minutes <AiOutlineClose className='listCloseIcon'/></li>
+            <li className='listItem'><FaCircleDot className='dot'/>reading for 20 minutes <AiOutlineClose  className='listCloseIcon'/></li>
+            <li className='listItem'> <FaCircleDot className='dot'/> {props.addedMessage} <AiOutlineClose className='listCloseIcon'/></li>
             <li className='listItem'><FaCircleDot className='dot'/>reading for 20 minutes <AiOutlineClose className='listCloseIcon'/></li>
             <li className='listItem'><FaCircleDot className='dot'/>reading for 20 minutes <AiOutlineClose className='listCloseIcon'/></li>
             <li className='listItem'><FaCircleDot className='dot'/>reading for 20 minutes <AiOutlineClose  className='listCloseIcon'/></li>
