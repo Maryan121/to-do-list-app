@@ -8,11 +8,17 @@ import { useState } from 'react';
 
 function App() {
   const [showAddCom,setShowAddCom] = useState(false);
-  const [addedMessage,setAddedMessage] = useState('');
+  const [addedMessage,setAddedMessage] = useState([]);
 
   function handleMessage(message){
     setAddedMessage(message)
+
+    
+
+    
   }
+  let newListWasAdded =(addedMessage == '' ? null : <Lists addedMessage = {addedMessage} setAddedMessage = {setAddedMessage}/>) 
+  
   function showTheAddComponentFunc(){
     setShowAddCom(!showAddCom);
     // console.log(showAddCom);
@@ -20,9 +26,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Lists  addedMessage = {addedMessage}/>
+      {/* <Lists  addedMessage = {addedMessage} /> */}
+      {newListWasAdded}
       {/* <Add /> */}
-      {showAddCom && <Add show = {showAddCom} onAdd = {handleMessage}/>}
+      {showAddCom && <Add show = {showAddCom} setShowAddCom ={setShowAddCom} onAdd = {handleMessage} addedMessage = {addedMessage} setAddedMessage = {setAddedMessage}/>}
+      
       <FaPlus className='plusIcon' onClick={showTheAddComponentFunc}/>
 
     </div>
